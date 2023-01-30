@@ -1,7 +1,7 @@
 import axios from 'axios';
 
 // export const DEFAULT_PAGE = 1;
-export let page = 1;
+let page = 1;
 export const perPage = 40;
 
 export async function fetchPixabey(searchValue) {

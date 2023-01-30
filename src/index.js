@@ -1,9 +1,7 @@
 import Notiflix from 'notiflix';
 import SimpleLightbox from 'simplelightbox';
 import 'simplelightbox/dist/simple-lightbox.min.css';
-import { fetchPixabey } from './js/fetchPixabay';
-import { page } from './js/fetchPixabay';
-import { perPage } from './js/fetchPixabay';
+import { fetchPixabey, perPage } from './js/fetchPixabay';
 import { createMarkup } from './js/createMarkup';
 
 const searchForm = document.querySelector('#search-form');
@@ -15,7 +13,7 @@ searchForm.addEventListener('submit', onFormSubmit);
 loadBtn.addEventListener('click', onLoadBtn);
 
 loadBtn.style.display = 'none';
-
+let page = 1;
 let searchValue = '';
 
 const options = {
